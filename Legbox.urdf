@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<robot name="Legbox">
+
+  <link name="BOX">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/BOX.STL" />
+      </geometry>
+      <material>
+        <color rgba="1.00000000 1.00000000 1.00000000 1.00000000"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/BOX.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0000004 -0.0000004 0.029163" rpy="0 0 0" />
+      <mass value="0.88729" />
+      <inertia ixx="0.004439" ixy="0" ixz="0" iyy="0.0081058" iyz="0" izz="0.010584" />
+    </inertial>
+  </link>
+
+  <link name="LL1">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LL1.STL" />
+      </geometry>
+      <material>
+        <color rgba="1.00000000 1.00000000 1.00000000 1.00000000"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LL1.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.049268 0.0089082 0" rpy="0 0 0" />
+      <mass value="0.092756" />
+      <inertia ixx="0.0000248" ixy="0.0000436" ixz="0" iyy="0.0002422" iyz="0" izz="0.0002516" />
+    </inertial>
+  </link>
+
+  <link name="LL3">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LL3.STL" />
+      </geometry>
+      <material>
+        <color rgba="1.00000000 1.00000000 1.00000000 1.00000000"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LL3.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.06 0.005 0" rpy="0 0 0" />
+      <mass value="0.041804" />
+      <inertia ixx="0.000005" ixy="0" ixz="0" iyy="0.0000633" iyz="0" izz="0.000059" />
+    </inertial>
+  </link>
+
+  <link name="WL">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/WL.STL" />
+      </geometry>
+      <material>
+        <color rgba="1.00000000 1.00000000 1.00000000 1.00000000"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/WL.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0.076621 0" rpy="0 0 0" />
+      <mass value="0.14676" />
+      <inertia ixx="0.0001439" ixy="0" ixz="0" iyy="0.000095" iyz="0" izz="0.0001439" />
+    </inertial>
+  </link>
+
+  <link name="LL2">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LL2.STL" />
+      </geometry>
+      <material>
+        <color rgba="1.00000000 1.00000000 1.00000000 1.00000000"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LL2.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.051963 0.012228 0" rpy="0 0 0" />
+      <mass value="0.087946" />
+      <inertia ixx="0.0000162" ixy="0.0000073" ixz="0" iyy="0.0002291" iyz="0" izz="0.0002306" />
+    </inertial>
+  </link>
+
+  <link name="LL4">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LL4.STL" />
+      </geometry>
+      <material>
+        <color rgba="1.00000000 1.00000000 1.00000000 1.00000000"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LL4.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.06 0.005 0" rpy="0 0 0" />
+      <mass value="0.041804" />
+      <inertia ixx="0.000005" ixy="0" ixz="0" iyy="0.0000633" iyz="0" izz="0.000059" />
+    </inertial>
+  </link>
+
+  <link name="LR1">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LR1.STL" />
+      </geometry>
+      <material>
+        <color rgba="1.00000000 1.00000000 1.00000000 1.00000000"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LR1.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.049268 0.0089082 0" rpy="0 0 0" />
+      <mass value="0.092756" />
+      <inertia ixx="0.0000248" ixy="0.0000436" ixz="0" iyy="0.0002422" iyz="0" izz="0.0002516" />
+    </inertial>
+  </link>
+
+  <link name="LR3">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LR3.STL" />
+      </geometry>
+      <material>
+        <color rgba="1.00000000 1.00000000 1.00000000 1.00000000"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LR3.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.06 0.005 0" rpy="0 0 0" />
+      <mass value="0.041804" />
+      <inertia ixx="0.000005" ixy="0" ixz="0" iyy="0.0000633" iyz="0" izz="0.000059" />
+    </inertial>
+  </link>
+
+  <link name="WR">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/WR.STL" />
+      </geometry>
+      <material>
+        <color rgba="1.00000000 1.00000000 1.00000000 1.00000000"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/WR.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0.076621 0" rpy="0 0 0" />
+      <mass value="0.14676" />
+      <inertia ixx="0.0001439" ixy="0" ixz="0" iyy="0.000095" iyz="0" izz="0.0001439" />
+    </inertial>
+  </link>
+
+  <!-- BUG FIX: LR2 原来质量为0、惯量全为0，会导致物理引擎奇异 -->
+  <!-- 临时使用 LL2 的参数，左右对称。务必用 CAD 重新计算精确值 -->
+  <link name="LR2">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LR2.STL" />
+      </geometry>
+      <material>
+        <color rgba="1.00000000 1.00000000 1.00000000 1.00000000"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LR2.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.051963 0.012228 0" rpy="0 0 0" />
+      <mass value="0.087946" />
+      <inertia ixx="0.0000162" ixy="0.0000073" ixz="0" iyy="0.0002291" iyz="0" izz="0.0002306" />
+    </inertial>
+  </link>
+
+  <link name="LR4">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LR4.STL" />
+      </geometry>
+      <material>
+        <color rgba="1.00000000 1.00000000 1.00000000 1.00000000"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/LR4.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.06 0.005 0" rpy="0 0 0" />
+      <mass value="0.041804" />
+      <inertia ixx="0.000005" ixy="0" ixz="0" iyy="0.0000633" iyz="0" izz="0.000059" />
+    </inertial>
+  </link>
+
+  <!-- 关节名全部加 _joint 后缀，避免与 link 名冲突 -->
+  <!-- 轴值清理：0.000001 → 1, -0.000001 → -1 -->
+  <!-- 限位按关节功能分别设置（弧度），不再是统一 0~40 -->
+
+  <!-- 左腿髋关节 -->
+  <joint name="LL1_joint" type="revolute">
+    <parent link="BOX" />
+    <child link="LL1" />
+    <origin xyz="-0.15046 -0.075 0.034413" rpy="3.1416 1.5646 1.5708" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.7854" upper="0.7854" effort="91.0035" velocity="19.69" />
+    <hardware>
+      <brand>Unitree</brand>
+      <motorType>B1-10010</motorType>
+      <motorDirection>-1</motorDirection>
+      <armature>0.0011969</armature>
+    </hardware>
+  </joint>
+
+  <!-- 左腿膝关节 -->
+  <joint name="LL3_joint" type="revolute">
+    <parent link="LL1" />
+    <child link="LL3" />
+    <origin xyz="0.12 -0.015 0" rpy="3.1416 0.88218 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="91.0035" velocity="19.69" />
+    <hardware>
+      <brand>Unitree</brand>
+      <motorType>B1-10010</motorType>
+      <motorDirection>1</motorDirection>
+      <armature>0.0011969</armature>
+    </hardware>
+  </joint>
+
+  <!-- 左轮：continuous，无限位 -->
+  <joint name="WL_joint" type="continuous">
+    <parent link="LL3" />
+    <child link="WL" />
+    <origin xyz="0.12 -0.055 0" rpy="3.1416 -0.64248 3.1416" />
+    <axis xyz="0 1 0" />
+    <hardware>
+      <brand>Unitree</brand>
+      <motorType>B1-10010</motorType>
+      <motorDirection>1</motorDirection>
+      <armature>0.0011969</armature>
+    </hardware>
+  </joint>
+
+  <!-- 左腿并联杆髋端 -->
+  <joint name="LL2_joint" type="revolute">
+    <parent link="BOX" />
+    <child link="LL2" />
+    <origin xyz="-0.14546 0.075 0.034413" rpy="3.1416 1.2919 1.5708" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.7854" upper="0.7854" effort="91.0035" velocity="19.69" />
+    <hardware>
+      <brand>Unitree</brand>
+      <motorType>B1-10010</motorType>
+      <motorDirection>1</motorDirection>
+      <armature>0.0011969</armature>
+    </hardware>
+  </joint>
+
+  <!-- 左腿并联杆膝端 -->
+  <joint name="LL4_joint" type="revolute">
+    <parent link="LL2" />
+    <child link="LL4" />
+    <origin xyz="0.12 0.025 0" rpy="0 -1.1165 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.7854" upper="0.7854" effort="91.0035" velocity="19.69" />
+    <hardware>
+      <brand>Unitree</brand>
+      <motorType>B1-10010</motorType>
+      <motorDirection>1</motorDirection>
+      <armature>0.0011969</armature>
+    </hardware>
+  </joint>
+
+  <!-- 右腿髋关节 -->
+  <joint name="LR1_joint" type="revolute">
+    <parent link="BOX" />
+    <child link="LR1" />
+    <origin xyz="0.15046 -0.075 0.034413" rpy="3.1416 1.2391 -1.5708" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-0.7854" upper="0.7854" effort="91.0035" velocity="19.69" />
+    <hardware>
+      <brand>Unitree</brand>
+      <motorType>B1-10010</motorType>
+      <motorDirection>1</motorDirection>
+      <armature>0.0011969</armature>
+    </hardware>
+  </joint>
+
+  <!-- 右腿膝关节 -->
+  <joint name="LR3_joint" type="revolute">
+    <parent link="LR1" />
+    <child link="LR3" />
+    <origin xyz="0.12 -0.015 0" rpy="3.1416 -1.2835 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="91.0035" velocity="19.69" />
+    <hardware>
+      <brand>Unitree</brand>
+      <motorType>B1-10010</motorType>
+      <motorDirection>1</motorDirection>
+      <armature>0.0011969</armature>
+    </hardware>
+  </joint>
+
+  <!-- 右轮：continuous，无限位 -->
+  <joint name="WR_joint" type="continuous">
+    <parent link="LR3" />
+    <child link="WR" />
+    <origin xyz="0.12 -0.055 0" rpy="3.1416 0.094068 3.1416" />
+    <axis xyz="0 1 0" />
+    <hardware>
+      <brand>Unitree</brand>
+      <motorType>B1-10010</motorType>
+      <motorDirection>1</motorDirection>
+      <armature>0.0011969</armature>
+    </hardware>
+  </joint>
+
+  <!-- 右腿并联杆髋端 -->
+  <joint name="LR2_joint" type="revolute">
+    <parent link="BOX" />
+    <child link="LR2" />
+    <origin xyz="0.14546 0.075 0.034413" rpy="0 1.4834 1.5708" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-0.7854" upper="0.7854" effort="91.0035" velocity="19.69" />
+    <hardware>
+      <brand>Unitree</brand>
+      <motorType>B1-10010</motorType>
+      <motorDirection>1</motorDirection>
+      <armature>0.0011969</armature>
+    </hardware>
+  </joint>
+
+  <!-- 右腿并联杆膝端 -->
+  <joint name="LR4_joint" type="revolute">
+    <parent link="LR2" />
+    <child link="LR4" />
+    <origin xyz="0.12 0.025 0" rpy="0 1.1002 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-0.7854" upper="0.7854" effort="91.0035" velocity="19.69" />
+    <hardware>
+      <brand>Unitree</brand>
+      <motorType>B1-10010</motorType>
+      <motorDirection>1</motorDirection>
+      <armature>0.0011969</armature>
+    </hardware>
+  </joint>
+
+</robot>

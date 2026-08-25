@@ -1,0 +1,93 @@
+<mujoco model="Legbox_skeleton">
+  <compiler angle="radian" meshdir="meshes/"/>
+
+  <default>
+    <motor ctrlrange="-1 1" ctrllimited="true"/>
+    <joint actuatorfrclimited="true" type="hinge"/>
+  </default>
+
+  <asset>
+    <mesh name="BOX" file="BOX.STL"/>
+    <mesh name="LL1" file="LL1.STL"/>
+    <mesh name="LL2" file="LL2.STL"/>
+    <mesh name="LL3" file="LL3.STL"/>
+    <mesh name="LL4" file="LL4.STL"/>
+    <mesh name="LR1" file="LR1.STL"/>
+    <mesh name="LR2" file="LR2.STL"/>
+    <mesh name="LR3" file="LR3.STL"/>
+    <mesh name="LR4" file="LR4.STL"/>
+    <mesh name="WL" file="WL.STL"/>
+    <mesh name="WR" file="WR.STL"/>
+  </asset>
+
+  <worldbody>
+    <body name="BOX">
+      <inertial pos="0.0000004 -0.0000004 0.029163" mass="0.88729" diaginertia="0.004439 0.0081058 0.010584"/>
+      <freejoint name="BOX"/>
+      <geom pos="0 0 0" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" type="mesh" mesh="BOX"/>
+      <body name="LL1" pos="-0.15046 -0.075 0.034413" quat="0.4984476 0.5015476 0.5015458 -0.4984494">
+        <inertial pos="0.049268 0.0089082 0" mass="0.092756" diaginertia="0.0000248 0.0002422 0.0002516"/>
+        <joint name="LL1" pos="0 0 0" type="hinge" axis="0 1 0" range="-0.7854 0.7854" actuatorfrcrange="-91.0035 91.0035"/>
+        <geom pos="0 0 0" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" type="mesh" mesh="LL1"/>
+        <body name="LL3" pos="0.12 -0.015 0" quat="-0.0000033 0.9042869 -0.0000016 -0.4269254">
+          <inertial pos="0.06 0.005 0" mass="0.041804" diaginertia="0.000005 0.0000633 0.000059"/>
+          <joint name="LL3" pos="0 0 0" type="hinge" axis="0 -1 0" range="-1.5708 1.5708" actuatorfrcrange="-91.0035 91.0035"/>
+          <geom pos="0 0 0" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" type="mesh" mesh="LL3"/>
+          <body name="WL" pos="0.12 -0.055 0" quat="-0.3157434 -0.0000046 0.9488446 -0.0000046">
+            <inertial pos="0 0.076621 0" mass="0.14676" diaginertia="0.0001439 0.000095 0.0001439"/>
+            <joint name="WL" pos="0 0 0" type="hinge" axis="0 1 0" actuatorfrcrange="-91.0035 91.0035"/>
+            <geom pos="0 0 0" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" type="mesh" mesh="WL"/>
+          </body>
+        </body>
+      </body>
+      <body name="LL2" pos="-0.14546 0.075 0.034413" quat="0.4256468 0.5646453 0.5646442 -0.4256494">
+        <inertial pos="0.051963 0.012228 0" mass="0.087946" diaginertia="0.0000162 0.0002291 0.0002306"/>
+        <joint name="LL2" pos="0 0 0" type="hinge" axis="0 1 0" range="-0.7854 0.7854" actuatorfrcrange="-91.0035 91.0035"/>
+        <geom pos="0 0 0" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" type="mesh" mesh="LL2"/>
+        <body name="LL4" pos="0.12 0.025 0" quat="0.8481834 0 -0.5297027 0">
+          <inertial pos="0.06 0.005 0" mass="0.041804" diaginertia="0.000005 0.0000633 0.000059"/>
+          <joint name="LL4" pos="0 0 0" type="hinge" axis="0 1 0" range="-0.7854 0.7854" actuatorfrcrange="-91.0035 91.0035"/>
+          <geom pos="0 0 0" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" type="mesh" mesh="LL4"/>
+        </body>
+      </body>
+      <body name="LR1" pos="0.15046 -0.075 0.034413" quat="-0.4105978 0.5756812 -0.5756864 -0.410592">
+        <inertial pos="0.049268 0.0089082 0" mass="0.092756" diaginertia="0.0000248 0.0002422 0.0002516"/>
+        <joint name="LR1" pos="0 0 0" type="hinge" axis="0 -1 0" range="-0.7854 0.7854" actuatorfrcrange="-91.0035 91.0035"/>
+        <geom pos="0 0 0" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" type="mesh" mesh="LR1"/>
+        <body name="LR3" pos="0.12 -0.015 0" quat="-0.0000029 0.8010494 0.0000022 0.5985982">
+          <inertial pos="0.06 0.005 0" mass="0.041804" diaginertia="0.000005 0.0000633 0.000059"/>
+          <joint name="LR3" pos="0 0 0" type="hinge" axis="0 1 0" range="-1.5708 1.5708" actuatorfrcrange="-91.0035 91.0035"/>
+          <geom pos="0 0 0" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" type="mesh" mesh="LR3"/>
+          <body name="WR" pos="0.12 -0.055 0" quat="0.0470167 -0.0000035 0.9988941 -0.0000035">
+            <inertial pos="0 0.076621 0" mass="0.14676" diaginertia="0.0001439 0.000095 0.0001439"/>
+            <joint name="WR" pos="0 0 0" type="hinge" axis="0 1 0" actuatorfrcrange="-91.0035 91.0035"/>
+            <geom pos="0 0 0" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" type="mesh" mesh="WR"/>
+          </body>
+        </body>
+      </body>
+      <body name="LR2" pos="0.14546 0.075 0.034413" quat="0.5213639 -0.4776814 0.4776797 0.5213658">
+        <inertial pos="0.051963 0.012228 0" mass="0.087946" diaginertia="0.0000162 0.0002291 0.0002306"/>
+        <joint name="LR2" pos="0 0 0" type="hinge" axis="0 -1 0" range="-0.7854 0.7854" actuatorfrcrange="-91.0035 91.0035"/>
+        <geom pos="0 0 0" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" type="mesh" mesh="LR2"/>
+        <body name="LR4" pos="0.12 0.025 0" quat="0.8524722 0 0.5227725 0">
+          <inertial pos="0.06 0.005 0" mass="0.041804" diaginertia="0.000005 0.0000633 0.000059"/>
+          <joint name="LR4" pos="0 0 0" type="hinge" axis="0 -1 0" range="-0.7854 0.7854" actuatorfrcrange="-91.0035 91.0035"/>
+          <geom pos="0 0 0" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" type="mesh" mesh="LR4"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <motor name="LL1" joint="LL1"/>
+    <motor name="LL2" joint="LL2"/>
+    <motor name="LL3" joint="LL3"/>
+    <motor name="LL4" joint="LL4"/>
+    <motor name="LR1" joint="LR1"/>
+    <motor name="LR2" joint="LR2"/>
+    <motor name="LR3" joint="LR3"/>
+    <motor name="LR4" joint="LR4"/>
+    <motor name="WL" joint="WL"/>
+    <motor name="WR" joint="WR"/>
+  </actuator>
+</mujoco>
