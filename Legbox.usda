@@ -327,9 +327,6 @@ def Xform "World"
                 displayName = "Name Override"
                 doc = "Name override for prim lookup in base name search"
             )
-            point3f physics:centerOfMass = (0.051963, 0.012228, 0)
-            float3 physics:diagonalInertia = (0.000015949987, 0.00022935001, 0.0002306)
-            float physics:mass = 0.087946
 
             def PhysicsRevoluteJoint "LR2" (
                 prepend apiSchemas = ["PhysicsDriveAPI:physics"]

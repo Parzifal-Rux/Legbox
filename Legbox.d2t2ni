@@ -1,0 +1,109 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary cameraSettings = {
+            dictionary Front = {
+                double3 position = (5, 0, 0)
+                double radius = 5
+            }
+            dictionary Perspective = {
+                double3 position = (0.6885553669170111, -1.1346245086806288, 1.1202265587049458)
+                double3 target = (-0.4626272994999091, 0.9159236116658662, -0.08120755665152335)
+            }
+            dictionary Right = {
+                double3 position = (0, -5, 0)
+                double radius = 5
+            }
+            dictionary Top = {
+                double3 position = (0, 0, 5)
+                double radius = 5
+            }
+            string boundCamera = "/OmniverseKit_Persp"
+        }
+        dictionary omni_layer = {
+            string authoring_layer = "./Legbox.usd"
+            dictionary locked = {
+            }
+            dictionary muteness = {
+            }
+        }
+        dictionary renderSettings = {
+        }
+    }
+    defaultPrim = "World"
+    endTimeCode = 1000000
+    metersPerUnit = 1
+    startTimeCode = 0
+    timeCodesPerSecond = 60
+    upAxis = "Z"
+)
+
+def Xform "World"
+{
+    over "Legbox" (
+        prepend references = @./Legbox/Legbox.usd@
+    )
+    {
+        string isaac:namespace (
+            displayName = "Namespace"
+            doc = "Namespace of the prim in Isaac Sim"
+        )
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.005495952222688781, 0, 0.5323655830068228)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "LL1"
+        {
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
+
+            def PhysicsRevoluteJoint "LL1" (
+                prepend apiSchemas = ["PhysicsDriveAPI:physics"]
+            )
+            {
+                custom float drive:physics:damping = 400
+                custom float drive:physics:maxForce = 200
+                float drive:physics:physics:damping = 5000
+                float drive:physics:physics:maxForce = 5000
+                float drive:physics:physics:stiffness = 100000
+                float drive:physics:physics:targetPosition = 0
+                float drive:physics:physics:targetVelocity = 0
+                uniform token drive:physics:physics:type = "force"
+                custom float drive:physics:stiffness = 5000
+                custom float drive:physics:targetPosition = 0.1
+                custom float drive:physics:targetVelocity = 0
+                custom token drive:physics:type = "force"
+                uniform token physics:axis = "Y"
+                rel physics:body0 = </World/Legbox/BOX>
+                rel physics:body1 = </World/Legbox/LL1>
+                float physics:breakForce = 3.4028235e38
+                float physics:breakTorque = 3.4028235e38
+                point3f physics:localPos0 = (-0.15046, -0.075, 0.034413)
+                point3f physics:localPos1 = (0, 0, 0)
+                quatf physics:localRot0 = (0.49844763, 0.5015475, 0.5015458, -0.49844941)
+                quatf physics:localRot1 = (1, 0, 0, 0)
+                custom token physics:type = "force"
+            }
+        }
+
+        over "LL3"
+        {
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
+
+            def PhysicsRevoluteJoint "LL3" (
+                prepend apiSchemas = ["PhysicsDriveAPI:physics"]
+            )
+            {
+                custom float drive:physics:damping = 400
+                custom float drive:physics:maxForce = 200
+                float drive:physics:physics:damping = 5000
+                float drive:physics:physics:maxForce = 5000
+                float drive:physics:physics:stiffness = 100000
+                float drive:physics:physics:targetPosition = -0.5
+                float drive:phys
